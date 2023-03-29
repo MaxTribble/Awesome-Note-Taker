@@ -16,7 +16,7 @@ app.post('/api/notes', (req, res) => {
       
     allNotes.push(newNote);
     fs.writeFileSync('db/db.json', JSON.stringify(allNotes));
-    console.log(allNotes)
+    res.json(allNotes)
     }
   });
 
